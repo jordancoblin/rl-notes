@@ -7,4 +7,4 @@ As opposed to other RL problems, the bandits problem involves taking action from
 **Incremental average reward**: Can transform the standard expression for average reward into one that supports incremental updates (this is a theme for DP techniques in general).
 I.e. $$Q_{n+1} = 1/n \sum_{i=1}^{n} R_i$$
 becomes
-$$Q_{n+1} = Q_n + 1/n[R_n - Q_n]
+$$Q_{n+1} = Q_n + 1/n[R_n - Q_n]$$
