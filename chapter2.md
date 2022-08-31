@@ -15,4 +15,4 @@ $$Q_{n+1} = Q_n + 1/n[R_n - Q_n]$$
 
 **UCB**: alternative method for handling exploitation vs. exploration. Use optimality + uncertainty about each action as a way to select next action.
 
-$$A_t \doteq [Q_t(a) + c \sqrt(ln t/N_t(a))]$$
+$$A_t \doteq [Q_t(a) + c \sqrt{ln{t}/N_t(a)}]$$
