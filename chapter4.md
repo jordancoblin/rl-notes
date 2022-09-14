@@ -15,4 +15,4 @@ Can do this iteratively, by updating $v_{k+1}$ to be the result of the bellman e
 
 $$ v_{k+1}(s) = \mathbb{E_\pi} [R_{t+1} + \gamma v_k(S_{t+1}) | S_t = s] $$
 
-$v_k$ can be shown to converge to $v_\pi$ as $k -> \infty$.
+$v_k$ can be shown to converge to $v_\pi$ as $k \rightarrow \infty$.
