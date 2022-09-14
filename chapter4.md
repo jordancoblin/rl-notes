@@ -10,6 +10,9 @@ Key idea: use value function to structure policy search -> DP can be used to com
 ### 4.1 Policy Evaluation
 Prediction problem -> computing the value function.
 
+**Iterative Policy Evaluation**:
 Can do this iteratively, by updating $v_{k+1}$ to be the result of the bellman equation over $v_k$:
 
 $$ v_{k+1}(s) = \mathbb{E_\pi} [R_{t+1} + \gamma v_k(S_{t+1}) | S_t = s] $$
+
+$v_k$ can be shown to converge to $v_\pi$ as $k -> \infty$.
