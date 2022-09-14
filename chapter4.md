@@ -12,4 +12,4 @@ Prediction problem -> computing the value function.
 
 Can do this iteratively, by updating $v_{k+1}$ to be the result of the bellman equation over $v_k$:
 
-$$ v_{k+1}(s) = \mathbb{E_\pi} R $$
+$$ v_{k+1}(s) = \mathbb{E_\pi} [R_{t+1} + \gamma v_k(S_{t+1}) | S_t = s] $$
