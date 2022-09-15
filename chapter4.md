@@ -21,3 +21,6 @@ One iteration -> update value of _every state_ once.
 
 ### 4.2 Policy Improvement
 
+Question: is it better or worse to change to a new policy? One way to answer is to consider selecting action $a$ in state $s$ and following the existing policy $\pi$ thereafter. Value would be:
+
+$$ q_{\pi}(s, a) = \mathbb{E} [R_{t+1} + \gamma v_{\pi}(S_{t+1}) | S_t = s, A_t = a] $$
