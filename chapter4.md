@@ -25,7 +25,7 @@ Question: is it better or worse to change to a new policy? One way to answer is 
 
 $$ 
 \begin{align} 
-q_{\pi}(s, a) &= \mathbb{E} [R_{t+1} + \gamma v_{\pi}(S_{t+1}) | S_t = s, A_t = a] 
+q_{\pi}(s, a) &= \mathbb{E} [R_{t+1} + \gamma v_{\pi}(S_{t+1}) | S_t = s, A_t = a] \\
 &= 5
 \end{align}
 $$
