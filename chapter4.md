@@ -39,7 +39,7 @@ $$ q_\pi(s, \pi^{\prime}(s)) \ge v_\pi(s) $$
 
 then $\pi^{\prime}$ must be better than $\pi$:
 
-$$ v_{\pi^\prime} \ge v_\pi $$
+$$ v_{\pi^\prime}(s) \ge v_\pi(s) $$
 
 
 
