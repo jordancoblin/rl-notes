@@ -30,3 +30,16 @@ q_{\pi}(s, a) &= \mathbb{E} [R_{t+1} + \gamma v_{\pi}(S_{t+1}) | S_t = s, A_t = 
 \end{align}
 $$
 
+If this new policy, of taking action a, then following $\pi$ has a higher value than just following $\pi$, then this new policy is better.
+
+**Policy Improvement Theorem**:
+Let $\pi$ and $\pi^{\prime}$ be any two deterministic policies, such that for all s $\in$ S:
+
+$$ q_\pi(s, \pi^{\prime}(s)) \ge v_\pi(s) $$
+
+then $\pi^{\prime}$ must be better than $\pi$:
+
+$$ v_{\pi^\prime} ge v_\pi $$
+
+
+
