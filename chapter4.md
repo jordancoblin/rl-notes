@@ -41,5 +41,7 @@ then $\pi^{\prime}$ must be better than $\pi$:
 
 $$ v_{\pi^\prime}(s) \ge v_\pi(s) $$
 
+for all s $\in$ S.
+
 
 
