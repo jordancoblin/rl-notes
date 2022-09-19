@@ -53,5 +53,14 @@ Ideas in this section **extend to stochastic policies**
 
 Combine evaluation and improvement: Evaluate $v_\pi$ -> improve to $\pi^\prime$ -> evaluate $v_{\pi^{\prime}}$ -> ...
 
+### 4.4. Value Iteration
+
+Policy iteration can be slow because each iteration requires us to do policy evaluation, which may itself require many iterations. Can truncate policy evaluation to speed things up, while still maintaining convergence guarantees.
+
+**Value Iteration**: truncate policy evaluation after just one sweep (one update of all states).
+
+Can now combine evaluation and improvement into a single update:
+
+$$ v_{k+1}(s) = \max_a \mathbb{E} [ R_{t+1} + \gamma v_k(S_{t+1}) | S_t = s, A_t = a ] $$
 
 
