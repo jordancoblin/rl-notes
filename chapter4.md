@@ -5,7 +5,9 @@ Useful as a foundation for more sophisticated methods.
 
 Continuous states/action spaces -> quantize/bin into finite spaces.
 
-Key idea: use value function to structure policy search -> DP can be used to compute value functions, by splitting into sub-problems (recursive definition). I.e. estimates value of states based on values of successor states -> we call this _bootstrapping_.
+**Key idea**: use value function to structure policy search -> DP can be used to compute value functions, by splitting into sub-problems (recursive definition). I.e. estimates value of states based on values of successor states -> we call this _bootstrapping_.
+
+DP requires a perfect model of env/MDP, since it uses state transition function $p(s^\prime, r | s, a)$ to compute expected returns.
 
 
 ### 4.1 Policy Evaluation
