@@ -5,7 +5,8 @@ Useful as a foundation for more sophisticated methods.
 
 Continuous states/action spaces -> quantize/bin into finite spaces.
 
-Key idea: use value function to structure policy search -> DP can be used to compute value functions, by splitting into sub-problems (recursive definition).
+Key idea: use value function to structure policy search -> DP can be used to compute value functions, by splitting into sub-problems (recursive definition). I.e. estimates value of states based on values of successor states -> we call this _bootstrapping_.
+
 
 ### 4.1 Policy Evaluation
 Prediction problem -> computing the value function.
@@ -63,4 +64,10 @@ Can now combine evaluation and improvement into a single update:
 
 $$ v_{k+1}(s) = \max_a \mathbb{E} [ R_{t+1} + \gamma v_k(S_{t+1}) | S_t = s, A_t = a ] $$
 
+Can often achieve faster convergence by taking multiple steps of policy evaluation between each step of policy improvement (instead of just one step, as in value iteration).
 
+**Generalized Policy Iteration**: general idea of interleaving policy evaluation and improvement processes, independend of frequency/details of the processes.
+
+### 4.7 Efficiency of DP
+
+DP methods quite efficient at solving MDP's compared to other methods. Worst case: polynomial in number of states and actions. 
