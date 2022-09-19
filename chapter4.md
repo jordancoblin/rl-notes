@@ -51,7 +51,7 @@ Ideas in this section **extend to stochastic policies**
 
 ### 4.3 Policy Iteration
 
-Combine evaluation and improvement: Evaluate $v_\pi$ -> improve to $\pi^\prime$ -> evaluate $v_\pi^\prime$ -> ...
+Combine evaluation and improvement: Evaluate $v_\pi$ -> improve to $\pi^\prime$ -> evaluate $v_{\pi^{\prime}}$ -> ...
 
 
 
