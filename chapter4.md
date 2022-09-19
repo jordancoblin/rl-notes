@@ -43,5 +43,9 @@ $$ v_{\pi^\prime}(s) \ge v_\pi(s) $$
 
 for all s $\in$ S.
 
+Then, we can consider a new greedy policy $\pi^\prime$ that selects best action across all states according to $q_\pi(s,a)$:
+
+$$ \pi^\prime(s) = \argmax_a q_\pi(s,a) $$
+
 
 
