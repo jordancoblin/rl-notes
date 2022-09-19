@@ -47,5 +47,11 @@ Then, we can consider a new greedy policy $\pi^\prime$ that selects best action 
 
 $$ \pi^\prime(s) = \arg \max_a q_\pi(s,a) $$
 
+Ideas in this section **extend to stochastic policies**
+
+### 4.3 Policy Iteration
+
+Combine evaluation and improvement: Evaluate $v_\pi$ -> improve to $\pi^\prime$ -> evaluate $v_\pi^\prime$ -> ...
+
 
 
