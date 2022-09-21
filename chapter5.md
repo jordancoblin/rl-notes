@@ -19,7 +19,7 @@ Without a model, need to estimate _action-values_ and not just _state_values_ in
 
 **Exploration Problem**: if a policy only ever takes action a from state s, then we will not be able to improve action-value estimates for other actions.
 
-Solution 1: **Exploring Starts**, which makes every state-action pair have a non-zero probability of being selected as start state.
+Solution 1: **Exploring Starts**, which makes every state-action pair have a non-zero probability of being selected as start state. \\
 Solution 2: Can't always control start state. Instead, use stochastic policies that have non-zero probability of selecting each action from all states.
 
 ## 5.3 MC Control
