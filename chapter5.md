@@ -62,4 +62,11 @@ $$ v_b(s) = \mathbb{E}[G_t | S_t=s] $$
 
 $$ v_\pi(s) = \mathbb{E}[\rho_{t:T-1} G_t | S_t=s] $$
 
-Where $G_t$ are the returns from the behaviour policy. $\rho$ gives us the proper expected return for target policy. $\\mathcal{T}(s)$
+Where $G_t$ are the returns from the behaviour policy. $\rho$ gives us the proper expected return for target policy. 
+
+Let $\mathcal{T}(s)$ = set of all time steps in which state s was visited across all episodes (for every visit).
+
+Then, a MC algo that averages return across episodes will use:
+
+$$ V(s) = \frac{\sum_{t \in \mathcal{T}(s)} \rho_{t:T-1} G_t}{|\mathcal{T}(s)|}
+
