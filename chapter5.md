@@ -54,4 +54,4 @@ Assumption of **coverage**: every action taken under $\pi$ gets taken at least o
 
 **Importance sampling**: technique for estimating expected values under one distribution given samples from another -> weigh returns based on the relative probability of their trajectories occurring under the target and behaviour policies.
 
-$$ \rho_{t:T-1} = \prod_{k=t}^{T-1} (\pi(A_k | S_k) \over b(A_k | S_k)) $$
+$$ \rho_{t:T-1} = \prod_{k=t}^{T-1} \pi(A_k | S_k) \frac b(A_k | S_k) $$
