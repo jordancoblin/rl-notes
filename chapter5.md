@@ -80,7 +80,7 @@ $$ V(s) = \frac{\sum_{t \in \mathcal{T}(s)} \rho_{t:T-1} G_t}{\sum_{t \in \mathc
 
 Biased, but has bounded (and typically dramatically lower) variance.
 
-## 5.6 Incremental Implementation (of off-policy IS MC)
+## 5.6 Incremental Implementation (of off-policy MC)
 
 Ordinary importance sampling -> can easily use same incremental implementations as before.
 
@@ -91,3 +91,13 @@ $$ V_{n+1} = V_n + \frac{W_n}{C_n} [G_n - V_n] $$
 with cumulative sum
 
 $$ C_{n+1} = C_n + W_n $$ 
+
+## 5.7 Off-Policy MC Control
+
+Combine GPI with weighted importance sampling.
+
+Behaviour policy should satisfy the coverage requirement, and should be "soft" so that it explores all possibiilities. 
+
+<img width="826" alt="image" src="https://user-images.githubusercontent.com/7538750/192652825-2f798c01-011b-4ace-a5b3-211ac02505d8.png">
+
+$$ v_\pi(s) = \mathbb{E}[\rho_{t:T-1} G_t | S_t=s] $$
