@@ -42,4 +42,4 @@ Can use $\epsilon-greedy$ policy to ensure all actions get selected infinitely.
 
 <img width="804" alt="image" src="https://user-images.githubusercontent.com/7538750/192602315-bb86cc2b-aba4-48aa-9a38-944a14022413.png">
 
-Can show that policy improvement holds in this case.
+Can show that policy improvement holds in this case (however only achieve the best policy among $\epsilon-soft$ policies.
