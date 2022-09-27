@@ -24,5 +24,8 @@ Without a model, need to estimate _action-values_ and not just _state_values_ in
 
 ## 5.3 MC Control
 
+Policy improvement is done by making the policy greedy w.r.t. the current value function:
+
+$$ \pi(s) = \argm \max_a q(s, a) $$
 
 
