@@ -99,5 +99,3 @@ Combine GPI with weighted importance sampling.
 Behaviour policy should satisfy the coverage requirement, and should be "soft" so that it explores all possibiilities. 
 
 <img width="826" alt="image" src="https://user-images.githubusercontent.com/7538750/192652825-2f798c01-011b-4ace-a5b3-211ac02505d8.png">
-
-$$ v_\pi(s) = \mathbb{E}[\rho_{t:T-1} G_t | S_t=s] $$
