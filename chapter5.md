@@ -43,3 +43,15 @@ Can use $\epsilon-greedy$ policy to ensure all actions get selected infinitely.
 <img width="804" alt="image" src="https://user-images.githubusercontent.com/7538750/192602315-bb86cc2b-aba4-48aa-9a38-944a14022413.png">
 
 Can show that policy improvement holds in this case (however only achieve the best policy among $\epsilon-soft$ policies.
+
+## 5.5. Off-policy Prediction via Importance Sampling
+
+Off-policy allows us to separate the notion of behaviour policy from target policy. Off-policy methods are more powerful and more general (on-policy can be thought of as a special case of off-policy), but are of greater variance and slower to converge.
+
+Prediction -> behaviour and target policies are fixed.
+
+Assumption of **coverage**: every action taken under $\pi$ gets taken at least occasionally under b.
+
+**Importance sampling**: technique for estimating expected values under one distribution given samples from another -> weigh returns based on the relative probability of their trajectories occurring under the target and behaviour policies.
+
+$$ \ro_{t:T-1} = \product_{k=t}^{T-1} \pi(A_k | S_k) / b(A_k | S_k) $$
