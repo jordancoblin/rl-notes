@@ -68,11 +68,26 @@ Let $\mathcal{T}(s)$ = set of all time steps in which state s was visited across
 
 Then, a MC algo that averages return across episodes will use:
 
-Ordinary importance sampling:
+**Ordinary importance sampling**:
 
 $$ V(s) = \frac{\sum_{t \in \mathcal{T}(s)} \rho_{t:T-1} G_t}{|\mathcal{T}(s)|} $$
 
-Weighted importance sampling:
+Un-biased, but can have extreme variance since variance of \rho is unbounded.
+
+**Weighted importance sampling**:
 
 $$ V(s) = \frac{\sum_{t \in \mathcal{T}(s)} \rho_{t:T-1} G_t}{\sum_{t \in \mathcal{T}(s)} \rho_{t:T-1}} $$
 
+Biased, but has bounded (and typically dramatically lower) variance.
+
+## 5.6 Incremental Implementation (of off-policy IS MC)
+
+Ordinary importance sampling -> can easily use same incremental implementations as before.
+
+Weighted importance sampling -> need slightly different updates:
+
+$$ V_{n+1} = V_n + \frac{W_n}{C_n} [G_n - V_n] $$
+
+with cumulative sum
+
+$$ C_{n+1} = C_n + W_n $$ 
