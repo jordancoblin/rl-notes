@@ -24,8 +24,22 @@ Without a model, need to estimate _action-values_ and not just _state_values_ in
 
 ## 5.3 MC Control
 
+Policy evaluation is done as outlined in 5.1.
+
 Policy improvement is done by making the policy greedy w.r.t. the current value function:
 
 $$ \pi_{k+1}(s) = \arg \max_a q_{\pi_k}(s, a) $$
 
+Can show that policy improvement theorem holds in MC case.
 
+Monte Carlo with Exploring Starts: at the end of each episode, alternate between policy evaluation (averaged discounted returns) and policy improvement (greedy action selection) when processing each timestep.
+
+<img width="790" alt="image" src="https://user-images.githubusercontent.com/7538750/192599820-eef4ca4b-d074-4302-95de-c3f90d2713a3.png">
+
+## 5.4 MC Control w/o Exploring Starts
+
+Can use $\epsilon-greedy$ policy to ensure all actions get selected infinitely.
+
+<img width="804" alt="image" src="https://user-images.githubusercontent.com/7538750/192602315-bb86cc2b-aba4-48aa-9a38-944a14022413.png">
+
+Can show that policy improvement holds in this case.
