@@ -68,5 +68,5 @@ Let $\mathcal{T}(s)$ = set of all time steps in which state s was visited across
 
 Then, a MC algo that averages return across episodes will use:
 
-$$ V(s) = \frac{\sum_{t \in \mathcal{T}(s)} \rho_{t:T-1} G_t}{|\mathcal{T}(s)|}
+$$ V(s) = \frac{\sum_{t \in \mathcal{T}(s)} \rho_{t:T-1} G_t}{|\mathcal{T}(s)|} $$
 
