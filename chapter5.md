@@ -55,3 +55,8 @@ Assumption of **coverage**: every action taken under $\pi$ gets taken at least o
 **Importance sampling**: technique for estimating expected values under one distribution given samples from another -> weigh returns based on the relative probability of their trajectories occurring under the target and behaviour policies.
 
 $$ \rho_{t:T-1} = \prod_{k=t}^{T-1} \frac{\pi(A_k | S_k)}{b(A_k | S_k)} $$
+
+Note that the importance sampling ration $\rho$ only depends on the policies, and not the MDP transition probabilities.
+
+$$ v_b(s) = \mathbb{E}[G_t | S_t=s] $$
+$$ v_\pi(s) = \mathbb{E}[\rho_{t:T-1} G_t | S_t=s] $$
