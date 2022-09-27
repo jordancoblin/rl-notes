@@ -62,4 +62,4 @@ $$ v_b(s) = \mathbb{E}[G_t | S_t=s] $$
 
 $$ v_\pi(s) = \mathbb{E}[\rho_{t:T-1} G_t | S_t=s] $$
 
-Where $G_t$ are the returns from the behaviour policy. $\rho$ gives us the proper expected return for target policy. $\Tau$
+Where $G_t$ are the returns from the behaviour policy. $\rho$ gives us the proper expected return for target policy. $J(s)$
