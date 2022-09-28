@@ -35,3 +35,9 @@ MC: minimizes MSE of V(s) from actual returns during training.
 TD: estimates the MLE result of the Markov process -> converges to the **certainty-equivalence estimate**.
 
 Plot shows that TD outperforms MC in terms of RMSE on a random walk task. Given that MC minimizes MSE, this is surprising. This can be explained due to TD approximating the certainty-equivalence estimate: TD V(s) estimates encapsulate a model of the MDP (and transition probabilities) based on experience. Given this model, we compute an estimate of the value function if the model were _exactly correct_ - hence the "certainty-equivalence" naming. Another way of thinking of this is that TD can be considered to produce lower error on _future data_, whereas MC produces lower error on _existing data_.
+
+## 6.4 Sarsa: On-policy TD Control
+
+GPI + TD methods.
+
+$$ Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha (R_{t+1} + \gamma Q(S_{t+1}, A_{t+1}) - Q(S_t, A_t)) $$
