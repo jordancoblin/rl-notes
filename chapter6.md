@@ -41,3 +41,7 @@ Plot shows that TD outperforms MC in terms of RMSE on a random walk task. Given 
 GPI + TD methods.
 
 $$ Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha (R_{t+1} + \gamma Q(S_{t+1}, A_{t+1}) - Q(S_t, A_t)) $$
+
+## 6.5 Q-Learning: Off-policy TD Control
+
+$$ Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha (R_{t+1} + \gamma \max_a Q(S_{t+1}, a) - Q(S_t, A_t)) $$
