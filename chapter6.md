@@ -51,3 +51,7 @@ Directly approximates optimal value function $q*$, independent of the policy bei
 ## Expected Sarsa
 
 $$ Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha (R_{t+1} + \gamma \sum_a \pi(a|S_{t+1})Q(S_{t+1}, a) - Q(S_t, A_t)) $$
+
+Q-learning can be considered a special case of Expected Sarsa, where the behaviour policy is different from target policy, and the target is the greedy policy.
+
+Expected Sarsa generally performs better than Sarsa.
