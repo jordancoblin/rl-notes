@@ -45,3 +45,9 @@ $$ Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha (R_{t+1} + \gamma Q(S_{t+1}, A_{t
 ## 6.5 Q-Learning: Off-policy TD Control
 
 $$ Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha (R_{t+1} + \gamma \max_a Q(S_{t+1}, a) - Q(S_t, A_t)) $$
+
+Directly approximates optimal value function $q*$, independent of the policy being followed. Again, behaviour policy needs to satisfy coverage.
+
+## Expected Sarsa
+
+$$ Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha (R_{t+1} + \gamma \sum_a \pi(a|S_{t+1})Q(S_{t+1}, a) - Q(S_t, A_t)) $$
